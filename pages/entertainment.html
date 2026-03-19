@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOX Magazine - Entertainment</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="top-row">
+            <div class="menu-button-container">
+                <button class="menu-toggle" id="menuToggle">☰</button>
+            </div>
+            <div class="logo-container">
+                <h1>🌿 VOX Magazine</h1>
+            </div>
+            <div class="since-container">
+                <span class="since-badge">Since 2026</span>
+            </div>
+        </div>
+        <div class="subtitle-row">
+            <div class="subtitle">Entertainment • Movies • Music • Gaming</div>
+        </div>
+    </div>
+    <nav>
+        <ul id="navLinks">
+            <li><a href="../index.html">🏠 Home</a></li>
+            <li><a href="stories.html">📰 Feature Stories</a></li>
+            <li><a href="entertainment.html" class="active">🎬 Entertainment</a></li>
+            <li><a href="multimedia.html">🎥 Multimedia</a></li>
+            <li><a href="team.html">👥 Editorial Team</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="hero">
+        <h2>Entertainment Weekly</h2>
+        <p>Your guide to movies, music, gaming, and pop culture</p>
+    </section>
+
+    <section class="featured-section">
+        <h2>🎬 Movies & TV</h2>
+        <ul class="styled-list">
+            <li>"Eclipse" - The sci-fi epic breaking box office records</li>
+            <li>"The Last Symphony" - Oscar-winning drama now streaming</li>
+            <li>"Neon Dreams" - The cult favorite of the year</li>
+            <li>"Parallel Lives" - Mind-bending thriller on Netflix</li>
+            <li>"Ocean's Heart" - Animated masterpiece for all ages</li>
+        </ul>
+    </section>
+
+    <section class="featured-section">
+        <h2>🎵 Music</h2>
+        <ul class="styled-list">
+            <li>Afrobeats Dominates Global Charts</li>
+            <li>AI-Generated Music Hits Mainstream</li>
+            <li>Vinyl Revival: Records Outsell CDs</li>
+            <li>K-Pop's New Generation Takes Over</li>
+            <li>Podcast-Music Hybrids Emerge</li>
+        </ul>
+    </section>
+
+    <section class="featured-section">
+        <h2>🎮 Gaming</h2>
+        <ul class="styled-list">
+            <li>Virtual Reality Gaming Reaches New Heights</li>
+            <li>Indie Games Dominate Awards Season</li>
+            <li>Cloud Gaming Goes Mainstream</li>
+            <li>Esports Viewership Breaks Records</li>
+            <li>The Return of Retro Gaming</li>
+        </ul>
+    </section>
+
+    <section class="featured-section">
+        <h2>⭐ Star Interviews</h2>
+        <div class="articles-grid">
+            <article class="article-card">
+                <h3>Exclusive: Director on "Eclipse"</h3>
+                <p>Behind the scenes of the year's biggest film.</p>
+                <a href="#" class="btn">Watch Interview →</a>
+            </article>
+            <article class="article-card">
+                <h3>Afrobeats Star: "Music is Universal"</h3>
+                <p>Conversation with the artist taking over charts.</p>
+                <a href="#" class="btn">Read More →</a>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 VOX Magazine. All rights reserved.</p>
+    <div class="socials">
+        <a href="https://www.google.com" target="_blank" rel="noopener">🔍</a>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener">📘</a>
+        <a href="https://www.twitter.com" target="_blank" rel="noopener">🐦</a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener">📸</a>
+    </div>
+</footer>
+
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navLinks.classList.toggle('show');
+        menuToggle.classList.toggle('active');
+    });
+
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('show');
+            menuToggle.classList.remove('active');
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+            navLinks.classList.remove('show');
+            menuToggle.classList.remove('active');
+        }
+    });
+</script>
+
+</body>
+</html>

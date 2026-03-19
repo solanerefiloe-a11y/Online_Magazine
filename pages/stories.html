@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOX Magazine - Feature Stories</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="top-row">
+            <div class="menu-button-container">
+                <button class="menu-toggle" id="menuToggle">☰</button>
+            </div>
+            <div class="logo-container">
+                <h1>🌿 VOX Magazine</h1>
+            </div>
+            <div class="since-container">
+                <span class="since-badge">Since 2026</span>
+            </div>
+        </div>
+        <div class="subtitle-row">
+            <div class="subtitle">Feature Stories • In-Depth Journalism</div>
+        </div>
+    </div>
+    <nav>
+        <ul id="navLinks">
+            <li><a href="../index.html">🏠 Home</a></li>
+            <li><a href="stories.html" class="active">📰 Feature Stories</a></li>
+            <li><a href="entertainment.html">🎬 Entertainment</a></li>
+            <li><a href="multimedia.html">🎥 Multimedia</a></li>
+            <li><a href="team.html">👥 Editorial Team</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="hero">
+        <h2>Feature Stories</h2>
+        <p>Deep dives into lifestyle, culture, technology, and entertainment</p>
+    </section>
+
+    <section class="featured-section">
+        <h2>🌱 Lifestyle Features</h2>
+        <div class="articles-grid">
+            <article class="article-card">
+                <figure>
+                    <img src="../images/story1.jpeg" alt="Wellness" onerror="this.src='https://via.placeholder.com/400x250?text=Wellness'">
+                    <figcaption>The wellness revolution</figcaption>
+                </figure>
+                <h3>The Mindfulness Movement</h3>
+                <p>How meditation apps and wellness retreats are changing modern living.</p>
+                <a href="#" class="btn">Read Full Story →</a>
+            </article>
+            <article class="article-card">
+                <figure>
+                    <img src="../images/EcoTourism.jpeg" alt="Travel" onerror="this.src='https://via.placeholder.com/400x250?text=Travel'">
+                    <figcaption>Sustainable travel</figcaption>
+                </figure>
+                <h3>Eco-Tourism Rising</h3>
+                <p>Exploring how travelers are choosing sustainability over luxury.</p>
+                <a href="#" class="btn">Read Full Story →</a>
+            </article>
+        </div>
+    </section>
+
+    <section class="featured-section">
+        <h2>🎨 Culture Features</h2>
+        <div class="articles-grid">
+            <article class="article-card">
+                <figure>
+                    <img src="../images/NFT.jpeg" alt="Art" onerror="this.src='https://via.placeholder.com/400x250?text=Art'">
+                    <figcaption>Digital art explosion</figcaption>
+                </figure>
+                <h3>The NFT Revolution</h3>
+                <p>How digital artists are finding new audiences and markets.</p>
+                <a href="#" class="btn">Read Full Story →</a>
+            </article>
+            <article class="article-card">
+                <figure>
+                    <img src="../images/afrobeats.jpeg" alt="Music" onerror="this.src='https://via.placeholder.com/400x250?text=Music'">
+                    <figcaption>Global music fusion</figcaption>
+                </figure>
+                <h3>Afrobeats Goes Global</h3>
+                <p>The African sound taking over international charts.</p>
+                <a href="#" class="btn">Read Full Story →</a>
+            </article>
+        </div>
+    </section>
+
+    <section class="featured-section">
+        <h2>💻 Technology Features</h2>
+        <div class="articles-grid">
+            <article class="article-card">
+                <figure>
+                    <img src="../images/story2.jpeg" alt="AI" onerror="this.src='https://via.placeholder.com/400x250?text=AI'">
+                    <figcaption>AI in everyday life</figcaption>
+                </figure>
+                <h3>Living with Algorithms</h3>
+                <p>How AI is shaping our daily decisions and relationships.</p>
+                <a href="#" class="btn">Read Full Story →</a>
+            </article>
+            <article class="article-card">
+                <figure>
+                    <img src="../images/Clean.jpeg" alt="Tech" onerror="this.src='https://via.placeholder.com/400x250?text=Tech'">
+                    <figcaption>Green technology</figcaption>
+                </figure>
+                <h3>The Clean Tech Boom</h3>
+                <p>Innovations that are fighting climate change.</p>
+                <a href="#" class="btn">Read Full Story →</a>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 VOX Magazine. All rights reserved.</p>
+    <div class="socials">
+        <a href="https://www.google.com" target="_blank" rel="noopener">🔍</a>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener">📘</a>
+        <a href="https://www.twitter.com" target="_blank" rel="noopener">🐦</a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener">📸</a>
+    </div>
+</footer>
+
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navLinks.classList.toggle('show');
+        menuToggle.classList.toggle('active');
+    });
+
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('show');
+            menuToggle.classList.remove('active');
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+            navLinks.classList.remove('show');
+            menuToggle.classList.remove('active');
+        }
+    });
+</script>
+
+</body>
+</html>

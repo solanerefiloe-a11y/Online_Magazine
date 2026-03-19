@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOX Magazine - Multimedia</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="top-row">
+            <div class="menu-button-container">
+                <button class="menu-toggle" id="menuToggle">☰</button>
+            </div>
+            <div class="logo-container">
+                <h1>🌿 VOX Magazine</h1>
+            </div>
+            <div class="since-container">
+                <span class="since-badge">Since 2026</span>
+            </div>
+        </div>
+        <div class="subtitle-row">
+            <div class="subtitle">Multimedia • Video Interviews • Audio</div>
+        </div>
+    </div>
+    <nav>
+        <ul id="navLinks">
+            <li><a href="../index.html">🏠 Home</a></li>
+            <li><a href="stories.html">📰 Feature Stories</a></li>
+            <li><a href="entertainment.html">🎬 Entertainment</a></li>
+            <li><a href="multimedia.html" class="active">🎥 Multimedia</a></li>
+            <li><a href="team.html">👥 Editorial Team</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="hero">
+        <h2>Video Interviews</h2>
+        <p>Exclusive conversations with artists, innovators, and thought leaders</p>
+    </section>
+
+    <section class="featured-section">
+        <h2>🎥 Latest Video Interviews</h2>
+        <div class="video-gallery">
+            <figure>
+                <iframe src="https://www.youtube.com/embed/uIBpWuVKb5c"
+                    title="AI Interview"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+                <figcaption>🎙️ AI Expert on the Future of Creativity</figcaption>
+            </figure>
+
+            <figure>
+                <iframe src="https://www.youtube.com/embed/aAtH1LcD3_E"
+                    title="Innovation Talk"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+                <figcaption>💡 Director Discusses Innovation in Film</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="featured-section">
+        <h2>🎧 Audio Experiences</h2>
+        
+        <div class="audio-players">
+            <div class="audio-card">
+                <h3>🎙️ Podcast: The Creative Process</h3>
+                <p>Weekly conversations with artists, writers, and innovators • Episode 45: "Digital Storytelling"</p>
+                <audio controls preload="metadata">
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.ogg" type="audio/ogg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <div class="audio-card">
+                <h3>🎵 Music Discovery: Emerging Artists</h3>
+                <p>Curated playlist • Featuring: Amara Skye, The Vibes Collective, Luna Ray</p>
+                <audio controls preload="metadata">
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.ogg" type="audio/ogg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-section">
+        <h2>📺 Upcoming Interviews</h2>
+        <ul class="styled-list">
+            <li>Director of "Eclipse" - This Friday</li>
+            <li>Afrobeats Superstar - Next Week</li>
+            <li>Tech Innovator: The Future of AI</li>
+            <li>Award-Winning Journalist</li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 VOX Magazine. All rights reserved.</p>
+    <div class="socials">
+        <a href="https://www.google.com" target="_blank" rel="noopener">🔍</a>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener">📘</a>
+        <a href="https://www.twitter.com" target="_blank" rel="noopener">🐦</a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener">📸</a>
+    </div>
+</footer>
+
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navLinks.classList.toggle('show');
+        menuToggle.classList.toggle('active');
+    });
+
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('show');
+            menuToggle.classList.remove('active');
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+            navLinks.classList.remove('show');
+            menuToggle.classList.remove('active');
+        }
+    });
+</script>
+
+</body>
+</html>

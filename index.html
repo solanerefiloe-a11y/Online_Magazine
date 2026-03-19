@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOX Magazine - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="top-row">
+            <div class="menu-button-container">
+                <button class="menu-toggle" id="menuToggle">☰</button>
+            </div>
+            <div class="logo-container">
+                <h1>🌿 VOX Magazine</h1>
+            </div>
+            <div class="since-container">
+                <span class="since-badge">Since 2026</span>
+            </div>
+        </div>
+        <div class="subtitle-row">
+            <div class="subtitle">Lifestyle • Culture • Technology • Entertainment</div>
+        </div>
+    </div>
+    <nav>
+        <ul id="navLinks">
+            <li><a href="index.html" class="active">🏠 Home</a></li>
+            <li><a href="pages/stories.html">📰 Feature Stories</a></li>
+            <li><a href="pages/entertainment.html">🎬 Entertainment</a></li>
+            <li><a href="pages/multimedia.html">🎥 Multimedia</a></li>
+            <li><a href="pages/team.html">👥 Editorial Team</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="hero">
+        <h2>Welcome to VOX Magazine</h2>
+        <p>Your daily dose of lifestyle, culture, technology, and entertainment</p>
+    </section>
+
+    <section class="featured-section">
+        <h2 class="centered">Explore Our Sections</h2>
+        <div class="category-grid">
+            <div class="category-card">
+                <div class="category-icon">🌱</div>
+                <h3>Lifestyle</h3>
+                <p>Wellness, travel, food, and living well</p>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">🎨</div>
+                <h3>Culture</h3>
+                <p>Art, music, film, and cultural trends</p>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">💻</div>
+                <h3>Technology</h3>
+                <p>Innovation, AI, and digital future</p>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">🎬</div>
+                <h3>Entertainment</h3>
+                <p>Movies, music, gaming, and pop culture</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-section">
+        <h2 class="centered">Featured Articles</h2>
+        <div class="articles-grid">
+            <article class="article-card">
+                <figure>
+                    <img src="images/article1.jpeg" alt="Lifestyle" onerror="this.src='https://via.placeholder.com/400x200?text=Lifestyle'">
+                    <figcaption>Mindful living in 2026</figcaption>
+                </figure>
+                <h3>🌱 The Art of Slow Living</h3>
+                <p>How to find balance in a fast-paced digital world. Discover mindfulness techniques that are transforming lives.</p>
+                <a href="#" class="btn">Read More →</a>
+            </article>
+
+            <article class="article-card">
+                <figure>
+                    <img src="images/article2.jpeg" alt="Culture" onerror="this.src='https://via.placeholder.com/400x200?text=Culture'">
+                    <figcaption>Global art movements</figcaption>
+                </figure>
+                <h3>🎨 The New Renaissance</h3>
+                <p>How digital artists are redefining creativity and pushing boundaries in the modern art world.</p>
+                <a href="#" class="btn">Read More →</a>
+            </article>
+
+            <article class="article-card">
+                <figure>
+                    <img src="images/article3.jpeg" alt="Technology" onerror="this.src='https://via.placeholder.com/400x200?text=Technology'">
+                    <figcaption>AI and humanity</figcaption>
+                </figure>
+                <h3>💻 Living with AI</h3>
+                <p>How artificial intelligence is shaping daily life, from smart homes to creative tools.</p>
+                <a href="#" class="btn">Read More →</a>
+            </article>
+        </div>
+    </section>
+
+    <section class="featured-section">
+        <h2 class="centered">Top Stories This Week</h2>
+        <ul class="styled-list">
+            <li>The Future of Remote Work in 2026</li>
+            <li>10 Must-Visit Cultural Destinations</li>
+            <li>Breakthroughs in Green Technology</li>
+            <li>Summer Movie Preview: What to Watch</li>
+            <li>The Rise of Digital Nomad Communities</li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 VOX Magazine. All rights reserved.</p>
+    <div class="socials">
+        <a href="https://www.google.com" target="_blank" rel="noopener">🔍</a>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener">📘</a>
+        <a href="https://www.twitter.com" target="_blank" rel="noopener">🐦</a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener">📸</a>
+    </div>
+</footer>
+
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navLinks.classList.toggle('show');
+        menuToggle.classList.toggle('active');
+    });
+
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('show');
+            menuToggle.classList.remove('active');
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+            navLinks.classList.remove('show');
+            menuToggle.classList.remove('active');
+        }
+    });
+</script>
+
+</body>
+</html>

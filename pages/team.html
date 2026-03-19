@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOX Magazine - Editorial Team</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="top-row">
+            <div class="menu-button-container">
+                <button class="menu-toggle" id="menuToggle">☰</button>
+            </div>
+            <div class="logo-container">
+                <h1>🌿 VOX Magazine</h1>
+            </div>
+            <div class="since-container">
+                <span class="since-badge">Since 2026</span>
+            </div>
+        </div>
+        <div class="subtitle-row">
+            <div class="subtitle">Editorial Team • Meet the Creators</div>
+        </div>
+    </div>
+    <nav>
+        <ul id="navLinks">
+            <li><a href="../index.html">🏠 Home</a></li>
+            <li><a href="stories.html">📰 Feature Stories</a></li>
+            <li><a href="entertainment.html">🎬 Entertainment</a></li>
+            <li><a href="multimedia.html">🎥 Multimedia</a></li>
+            <li><a href="team.html" class="active">👥 Editorial Team</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="hero">
+        <h2>Our Editorial Team</h2>
+        <p>The passionate creators behind VOX Magazine</p>
+    </section>
+
+    <section class="featured-section">
+        <h2 class="centered">Leadership</h2>
+        <div class="team-gallery">
+            <div class="team-card">
+                <img src="../images/team1.jpeg" alt="Sarah Chen" onerror="this.src='https://via.placeholder.com/200x200?text=Sarah+Chen'">
+                <h3>Chere Chere, Libuseng Koebe, Palesa Tau</h3>
+                <p class="role">Editor-in-Chief</p>
+                <p>Overseeing all content and editorial vision</p>
+            </div>
+
+            <div class="team-card">
+                <img src="../images/team2.jpeg" alt="Marcus Okonkwo" onerror="this.src='https://via.placeholder.com/200x200?text=Marcus+O'">
+                <h3>Selloane Kalime, Denial Denial, Lineo Pace</h3>
+                <p class="role">Managing Editor</p>
+                <p>Leading feature stories and investigations</p>
+            </div>
+
+            <div class="team-card">
+                <img src="../images/team3.jpeg" alt="Elena Rodriguez" onerror="this.src='https://via.placeholder.com/200x200?text=Elena+R'">
+                <h3>Fusi Tokiso</h3>
+                <p class="role">Creative Director</p>
+                <p>Visual storytelling and design</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-section">
+        <h2 class="centered">Section Editors</h2>
+        <div class="team-gallery">
+            <div class="team-card">
+                <img src="../images/team4.jpeg" alt="David Kim" onerror="this.src='https://via.placeholder.com/200x200?text=David+Kim'">
+                <h3>David Pule</h3>
+                <p class="role">Technology Editor</p>
+                <p>Covering AI, innovation, and digital culture</p>
+            </div>
+
+            <div class="team-card">
+                <img src="../images/team5.jpeg" alt="Priya Patel" onerror="this.src='https://via.placeholder.com/200x200?text=Priya+Patel'">
+                <h3>Lebeso Khoarai</h3>
+                <p class="role">Culture Editor</p>
+                <p>Art, music, film, and cultural trends</p>
+            </div>
+
+            <div class="team-card">
+                <img src="../images/team6.jpeg" alt="Amara Okafor" onerror="this.src='https://via.placeholder.com/200x200?text=Amara+Okafor'">
+                <h3>Motebang Tatolo</h3>
+                <p class="role">Lifestyle Editor</p>
+                <p>Wellness, travel, and living well</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-section">
+        <h2 class="centered">Join Our Team</h2>
+        <p style="text-align: center; margin: 20px 0;">We're always looking for talented writers, editors, and multimedia creators.</p>
+        <div style="text-align: center;">
+            <a href="#" class="btn">View Open Positions →</a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 VOX Magazine. All rights reserved.</p>
+    <div class="socials">
+        <a href="https://www.google.com" target="_blank" rel="noopener">🔍</a>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener">📘</a>
+        <a href="https://www.twitter.com" target="_blank" rel="noopener">🐦</a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener">📸</a>
+    </div>
+</footer>
+
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navLinks.classList.toggle('show');
+        menuToggle.classList.toggle('active');
+    });
+
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('show');
+            menuToggle.classList.remove('active');
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+            navLinks.classList.remove('show');
+            menuToggle.classList.remove('active');
+        }
+    });
+</script>
+
+</body>
+</html>
