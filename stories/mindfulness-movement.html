@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mindfulness Movement - VOX Magazine</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/story.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="top-row">
+            <div class="menu-button-container">
+                <button class="menu-toggle" id="menuToggle">☰</button>
+            </div>
+            <div class="logo-container">
+                <h1>🌿 VOX Magazine</h1>
+            </div>
+            <div class="since-container">
+                <span class="since-badge">Since 2026</span>
+            </div>
+        </div>
+        <div class="subtitle-row">
+            <div class="subtitle">Feature Stories • In-Depth Journalism</div>
+        </div>
+    </div>
+    <nav>
+        <ul id="navLinks">
+            <li><a href="../index.html">🏠 Home</a></li>
+            <li><a href="../pages/stories.html" class="active">📰 Feature Stories</a></li>
+            <li><a href="../pages/entertainment.html">🎬 Entertainment</a></li>
+            <li><a href="../pages/multimedia.html">🎥 Multimedia</a></li>
+            <li><a href="../pages/team.html">👥 Editorial Team</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <article class="full-story">
+        <h1>🧘 The Mindfulness Movement</h1>
+        
+        <div class="meta">
+            <span>📅 March 20, 2026</span> • 
+            <span>✍️ By Sarah Chen</span> • 
+            <span>⏱️ 8 min read</span> • 
+            <span>🏷️ Lifestyle</span>
+        </div>
+        
+        <img src="../images/story1.jpeg" alt="Mindfulness Meditation" class="featured-image" onerror="this.src='https://via.placeholder.com/800x400?text=Mindfulness+Meditation'">
+        
+        <p>In our always-on, hyper-connected world, a quiet revolution is taking place. Millions of people are discovering the transformative power of mindfulness—the practice of being fully present in the moment. From corporate boardrooms to elementary school classrooms, mindfulness is reshaping how we live, work, and relate to one another.</p>
+        
+        <h2>What is Mindfulness?</h2>
+        <p>Mindfulness is the practice of paying attention to the present moment without judgment. It's about noticing your thoughts, feelings, and surroundings with curiosity rather than criticism. While rooted in ancient Buddhist traditions, modern mindfulness has been stripped of religious context and adapted for secular audiences worldwide.</p>
+        
+        <p>Research shows that regular mindfulness practice can reduce stress, improve focus, enhance emotional regulation, and even boost immune function. It's no wonder that what was once considered alternative is now mainstream.</p>
+        
+        <blockquote>
+            <p>"Mindfulness isn't about emptying your mind. It's about becoming aware of what's already there—and choosing where to place your attention." — Jon Kabat-Zinn</p>
+        </blockquote>
+        
+        <h2>Mindfulness Goes Mainstream</h2>
+        <p>The numbers tell a compelling story. Meditation apps like Headspace and Calm have been downloaded hundreds of millions of times. Corporate wellness programs increasingly include mindfulness training. Schools across the country are implementing social-emotional learning programs that include mindfulness practices.</p>
+        
+        <p>What's driving this shift? Experts point to several factors: rising rates of anxiety and depression, increased awareness of the dangers of chronic stress, and a growing recognition that our always-connected lifestyle comes with significant costs to mental health.</p>
+        
+        <h2>Science Behind the Practice</h2>
+        <p>Neuroscience has validated what practitioners have known for centuries: mindfulness literally changes the brain. Studies using fMRI scans show that regular meditation strengthens the prefrontal cortex—the part of the brain responsible for focus and decision-making—while reducing activity in the amygdala, the brain's fear center.</p>
+        
+        <p>These changes are measurable after just eight weeks of consistent practice. Participants report feeling calmer, more focused, and better able to handle life's challenges.</p>
+        
+        <h2>Practical Mindfulness: Where to Start</h2>
+        <p>Beginning a mindfulness practice doesn't require special equipment or hours of free time. Here are simple ways to start:</p>
+        <ul>
+            <li><strong>Start small:</strong> Commit to just 5 minutes of daily practice</li>
+            <li><strong>Use apps:</strong> Try Headspace, Calm, or Ten Percent Happier</li>
+            <li><strong>Practice mindful eating:</strong> Eat one meal without phones or TV</li>
+            <li><strong>Take mindful walks:</strong> Notice your surroundings without judgment</li>
+            <li><strong>Breathe deeply:</strong> Take three conscious breaths before checking your phone</li>
+        </ul>
+        
+        <div class="story-highlight">
+            <h3 style="margin-top: 0;">Try This: One-Minute Mindfulness</h3>
+            <p>Stop reading. Take three deep breaths. Notice what you hear, what you feel, what you see. That's mindfulness—and you just practiced it.</p>
+        </div>
+        
+        <h2>The Future of Mindfulness</h2>
+        <p>As research continues to demonstrate benefits, mindfulness is likely to become even more integrated into daily life. Companies are building mindfulness into their cultures. Healthcare systems are prescribing meditation alongside medication. Schools are teaching emotional regulation alongside academics.</p>
+        
+        <p>The mindfulness movement isn't about escaping reality—it's about engaging with it more fully. In a world that constantly pulls our attention in a thousand directions, learning to be present may be the most radical act of all.</p>
+        
+        <a href="../pages/stories.html" class="story-back-btn">← Back to Stories</a>
+    </article>
+</main>
+
+<footer>
+    <p>© 2026 VOX Magazine. All rights reserved.</p>
+    <div class="socials">
+        <a href="https://www.google.com" target="_blank">🔍</a>
+        <a href="https://www.facebook.com" target="_blank">📘</a>
+        <a href="https://www.twitter.com" target="_blank">🐦</a>
+        <a href="https://www.instagram.com" target="_blank">📸</a>
+    </div>
+</footer>
+
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navLinks.classList.toggle('show');
+        menuToggle.classList.toggle('active');
+    });
+
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('show');
+            menuToggle.classList.remove('active');
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+            navLinks.classList.remove('show');
+            menuToggle.classList.remove('active');
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Clean Tech Boom - VOX Magazine</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/story.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="top-row">
+            <div class="menu-button-container">
+                <button class="menu-toggle" id="menuToggle">☰</button>
+            </div>
+            <div class="logo-container">
+                <h1>🌿 VOX Magazine</h1>
+            </div>
+            <div class="since-container">
+                <span class="since-badge">Since 2026</span>
+            </div>
+        </div>
+        <div class="subtitle-row">
+            <div class="subtitle">Feature Stories • In-Depth Journalism</div>
+        </div>
+    </div>
+    <nav>
+        <ul id="navLinks">
+            <li><a href="../index.html">🏠 Home</a></li>
+            <li><a href="../pages/stories.html" class="active">📰 Feature Stories</a></li>
+            <li><a href="../pages/entertainment.html">🎬 Entertainment</a></li>
+            <li><a href="../pages/multimedia.html">🎥 Multimedia</a></li>
+            <li><a href="../pages/team.html">👥 Editorial Team</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <article class="full-story">
+        <h1>⚡ The Clean Tech Boom</h1>
+        
+        <div class="meta">
+            <span>📅 March 8, 2026</span> • 
+            <span>✍️ By David Kim</span> • 
+            <span>⏱️ 9 min read</span> • 
+            <span>🏷️ Technology</span>
+        </div>
+        
+        <img src="../images/Clean.jpeg" alt="Clean Technology" class="featured-image" onerror="this.src='https://via.placeholder.com/800x400?text=Clean+Technology'">
+        
+        <p>The transition to clean energy isn't just happening—it's accelerating. Solar panels are now the cheapest source of electricity in history. Electric vehicles are projected to outsell gas-powered cars within the decade. Green technology is no longer a niche market; it's the future of the global economy.</p>
+        
+        <h2>The Economics of Clean</h2>
+        <p>For years, the argument against clean energy was cost. Fossil fuels were simply cheaper. That's no longer true. The price of solar panels has fallen by 90% in the past decade. Wind power costs have dropped by 70%. Battery storage prices have plummeted, making renewable energy viable even when the sun isn't shining.</p>
+        
+        <p>This isn't just good for the planet—it's good business. Renewable energy now employs more people than fossil fuels. The clean tech market is projected to reach $2.5 trillion by 2030.</p>
+        
+        <h2>Innovations Driving Change</h2>
+        <p>Several breakthrough technologies are accelerating the transition:</p>
+        <ul>
+            <li><strong>Green Hydrogen:</strong> Hydrogen produced with renewable energy could replace fossil fuels in industries that are hard to electrify</li>
+            <li><strong>Advanced Batteries:</strong> New chemistries promise cheaper, longer-lasting storage</li>
+            <li><strong>Carbon Capture:</strong> Technologies that pull carbon directly from the air</li>
+            <li><strong>Smart Grids:</strong> AI-powered systems that optimize energy distribution</li>
+        </ul>
+        
+        <blockquote>
+            <p>"Clean technology has reached an inflection point. What was once expensive and difficult is now cheaper and easier than the alternatives." — Bill Gates, Breakthrough Energy</p>
+        </blockquote>
+        
+        <h2>The Jobs Revolution</h2>
+        <p>The clean tech boom is creating millions of jobs worldwide. Solar installers, wind turbine technicians, battery engineers, and grid modernization specialists are among the fastest-growing occupations. These aren't just green jobs—they're well-paying, stable careers in growing industries.</p>
+        
+        <h2>Challenges Remain</h2>
+        <p>Despite enormous progress, challenges remain. Supply chains for critical minerals need to be secured. Grid infrastructure requires massive investment. And the transition must be managed to ensure it's just and equitable for communities that have depended on fossil fuel industries.</p>
+        
+        <h2>The Future Is Clean</h2>
+        <p>The momentum behind clean technology is now unstoppable. Investment continues to pour in. Costs continue to fall. Adoption continues to accelerate. The clean tech boom isn't just transforming energy—it's transforming the economy, creating jobs, and offering a path to a sustainable future.</p>
+        
+        <a href="../pages/stories.html" class="story-back-btn">← Back to Stories</a>
+    </article>
+</main>
+
+<footer>
+    <p>© 2026 VOX Magazine. All rights reserved.</p>
+    <div class="socials">
+        <a href="https://www.google.com" target="_blank">🔍</a>
+        <a href="https://www.facebook.com" target="_blank">📘</a>
+        <a href="https://www.twitter.com" target="_blank">🐦</a>
+        <a href="https://www.instagram.com" target="_blank">📸</a>
+    </div>
+</footer>
+
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navLinks.classList.toggle('show');
+        menuToggle.classList.toggle('active');
+    });
+
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('show');
+            menuToggle.classList.remove('active');
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+            navLinks.classList.remove('show');
+            menuToggle.classList.remove('active');
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The NFT Revolution - VOX Magazine</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/story.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="top-row">
+            <div class="menu-button-container">
+                <button class="menu-toggle" id="menuToggle">☰</button>
+            </div>
+            <div class="logo-container">
+                <h1>🌿 VOX Magazine</h1>
+            </div>
+            <div class="since-container">
+                <span class="since-badge">Since 2026</span>
+            </div>
+        </div>
+        <div class="subtitle-row">
+            <div class="subtitle">Feature Stories • In-Depth Journalism</div>
+        </div>
+    </div>
+    <nav>
+        <ul id="navLinks">
+            <li><a href="../index.html">🏠 Home</a></li>
+            <li><a href="../pages/stories.html" class="active">📰 Feature Stories</a></li>
+            <li><a href="../pages/entertainment.html">🎬 Entertainment</a></li>
+            <li><a href="../pages/multimedia.html">🎥 Multimedia</a></li>
+            <li><a href="../pages/team.html">👥 Editorial Team</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <article class="full-story">
+        <h1>🖼️ The NFT Revolution</h1>
+        
+        <div class="meta">
+            <span>📅 March 15, 2026</span> • 
+            <span>✍️ By Elena Rodriguez</span> • 
+            <span>⏱️ 10 min read</span> • 
+            <span>🏷️ Culture</span>
+        </div>
+        
+        <img src="../images/NFT.jpeg" alt="Digital Art" class="featured-image" onerror="this.src='https://via.placeholder.com/800x400?text=NFT+Art'">
+        
+        <p>Three years ago, the art world was turned upside down when an artist known as Beeple sold a digital collage for $69 million. The sale wasn't just a record—it was a declaration. The art world had been disrupted, and a new era had begun.</p>
+        
+        <h2>What Are NFTs?</h2>
+        <p>NFTs—Non-Fungible Tokens—are unique digital assets verified on the blockchain. Think of them as certificates of authenticity for the digital age. While anyone can screenshot a digital artwork, the NFT proves who owns the original. It's like the difference between owning a print of the Mona Lisa and owning the actual painting.</p>
+        
+        <p>This technology has created entirely new markets for digital creators. Musicians, visual artists, writers, and even chefs are using NFTs to sell their work directly to collectors, bypassing traditional gatekeepers.</p>
+        
+        <h2>Democratizing Art</h2>
+        <p>Perhaps the most significant impact of NFTs has been on who gets to be an artist. Traditionally, breaking into the art world required gallery representation, connections, and often, living in the right cities. NFTs have democratized access. Anyone with talent and an internet connection can now reach a global audience.</p>
+        
+        <blockquote>
+            <p>"Before NFTs, I was struggling to sell prints for $50. Now I've sold works for tens of thousands, and I have collectors in countries I've never visited." — Digital Artist Maya Chen</p>
+        </blockquote>
+        
+        <h2>Beyond the Hype</h2>
+        <p>The NFT market has had its ups and downs. The frenzy of 2021-2022 gave way to a more mature market. Speculative buyers have moved on, leaving behind a community of genuine art lovers and collectors. Prices have stabilized. Platforms have improved their environmental impact, addressing one of the major criticisms of blockchain technology.</p>
+        
+        <h2>The Future of Digital Art</h2>
+        <p>Whether NFTs themselves endure or are replaced by something else, their impact is permanent. They've proven that digital art can hold value, that collectors will pay for digital ownership, and that artists can build independent careers online.</p>
+        
+        <p>The revolution isn't over—it's just beginning. As virtual and augmented reality advance, the line between digital and physical art will continue to blur. The next decade will bring art experiences we can barely imagine today.</p>
+        
+        <a href="../pages/stories.html" class="story-back-btn">← Back to Stories</a>
+    </article>
+</main>
+
+<footer>
+    <p>© 2026 VOX Magazine. All rights reserved.</p>
+    <div class="socials">
+        <a href="https://www.google.com" target="_blank">🔍</a>
+        <a href="https://www.facebook.com" target="_blank">📘</a>
+        <a href="https://www.twitter.com" target="_blank">🐦</a>
+        <a href="https://www.instagram.com" target="_blank">📸</a>
+    </div>
+</footer>
+
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navLinks.classList.toggle('show');
+        menuToggle.classList.toggle('active');
+    });
+
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('show');
+            menuToggle.classList.remove('active');
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+            navLinks.classList.remove('show');
+            menuToggle.classList.remove('active');
+        }
+    });
+</script>
+
+</body>
+</html>

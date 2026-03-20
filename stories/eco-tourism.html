@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Tourism Rising - VOX Magazine</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/story.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="top-row">
+            <div class="menu-button-container">
+                <button class="menu-toggle" id="menuToggle">☰</button>
+            </div>
+            <div class="logo-container">
+                <h1>🌿 VOX Magazine</h1>
+            </div>
+            <div class="since-container">
+                <span class="since-badge">Since 2026</span>
+            </div>
+        </div>
+        <div class="subtitle-row">
+            <div class="subtitle">Feature Stories • In-Depth Journalism</div>
+        </div>
+    </div>
+    <nav>
+        <ul id="navLinks">
+            <li><a href="../index.html">🏠 Home</a></li>
+            <li><a href="../pages/stories.html" class="active">📰 Feature Stories</a></li>
+            <li><a href="../pages/entertainment.html">🎬 Entertainment</a></li>
+            <li><a href="../pages/multimedia.html">🎥 Multimedia</a></li>
+            <li><a href="../pages/team.html">👥 Editorial Team</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <article class="full-story">
+        <h1>🌍 Eco-Tourism Rising</h1>
+        
+        <div class="meta">
+            <span>📅 March 18, 2026</span> • 
+            <span>✍️ By Amara Okafor</span> • 
+            <span>⏱️ 9 min read</span> • 
+            <span>🏷️ Lifestyle</span>
+        </div>
+        
+        <img src="../images/EcoTourism.jpeg" alt="Eco-Tourism" class="featured-image" onerror="this.src='https://via.placeholder.com/800x400?text=Eco-Tourism'">
+        
+        <p>Travel is changing. The days of mindless tourism—flying across the world to snap photos and leave nothing but carbon footprints—are giving way to something more meaningful. Eco-tourism, once a niche interest, has become a movement reshaping how we explore our planet.</p>
+        
+        <h2>What Makes Tourism "Eco"?</h2>
+        <p>True eco-tourism goes beyond planting a tree to offset your flight. It's about traveling in ways that minimize environmental impact, support local communities, and educate travelers about conservation. It's the difference between visiting a place and connecting with it.</p>
+        
+        <p>The International Ecotourism Society defines eco-tourism as "responsible travel to natural areas that conserves the environment, sustains the well-being of local people, and involves interpretation and education."</p>
+        
+        <h2>The Rise of Conscious Travel</h2>
+        <p>A 2025 survey found that 78% of travelers now consider sustainability when planning trips—up from just 40% five years ago. This shift reflects growing awareness of tourism's environmental impact and a desire for more authentic experiences.</p>
+        
+        <blockquote>
+            <p>"People are realizing that mass tourism often harms the very places they love. Eco-tourism offers a way to travel that gives back." — Dr. James Wilson, Tourism Researcher</p>
+        </blockquote>
+        
+        <h2>Making Your Travel More Sustainable</h2>
+        <p>You don't need to travel to remote eco-lodges to make a difference. Here are practical steps any traveler can take:</p>
+        <ul>
+            <li><strong>Choose longer stays:</strong> Short trips have higher per-day carbon footprints</li>
+            <li><strong>Use trains when possible:</strong> Rail travel produces far fewer emissions than flying</li>
+            <li><strong>Support local businesses:</strong> Eat at local restaurants, stay in locally-owned accommodations</li>
+            <li><strong>Pack light:</strong> Every kilogram on a flight increases fuel consumption</li>
+            <li><strong>Bring reusable items:</strong> Water bottles, bags, and containers reduce plastic waste</li>
+        </ul>
+        
+        <h2>The Future of Travel</h2>
+        <p>As climate concerns grow, eco-tourism will likely become not just preferred but expected. Airlines are investing in sustainable aviation fuels. Hotels are eliminating single-use plastics. Destinations are capping visitor numbers to prevent overcrowding.</p>
+        
+        <p>For travelers, this means more opportunities to explore the world in ways that leave it better than we found it. The journey is changing—and that's something worth traveling for.</p>
+        
+        <a href="../pages/stories.html" class="story-back-btn">← Back to Stories</a>
+    </article>
+</main>
+
+<footer>
+    <p>© 2026 VOX Magazine. All rights reserved.</p>
+    <div class="socials">
+        <a href="https://www.google.com" target="_blank">🔍</a>
+        <a href="https://www.facebook.com" target="_blank">📘</a>
+        <a href="https://www.twitter.com" target="_blank">🐦</a>
+        <a href="https://www.instagram.com" target="_blank">📸</a>
+    </div>
+</footer>
+
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navLinks.classList.toggle('show');
+        menuToggle.classList.toggle('active');
+    });
+
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('show');
+            menuToggle.classList.remove('active');
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+            navLinks.classList.remove('show');
+            menuToggle.classList.remove('active');
+        }
+    });
+</script>
+
+</body>
+</html>

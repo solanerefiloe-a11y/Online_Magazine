@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Living with Algorithms - VOX Magazine</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/story.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="top-row">
+            <div class="menu-button-container">
+                <button class="menu-toggle" id="menuToggle">☰</button>
+            </div>
+            <div class="logo-container">
+                <h1>🌿 VOX Magazine</h1>
+            </div>
+            <div class="since-container">
+                <span class="since-badge">Since 2026</span>
+            </div>
+        </div>
+        <div class="subtitle-row">
+            <div class="subtitle">Feature Stories • In-Depth Journalism</div>
+        </div>
+    </div>
+    <nav>
+        <ul id="navLinks">
+            <li><a href="../index.html">🏠 Home</a></li>
+            <li><a href="../pages/stories.html" class="active">📰 Feature Stories</a></li>
+            <li><a href="../pages/entertainment.html">🎬 Entertainment</a></li>
+            <li><a href="../pages/multimedia.html">🎥 Multimedia</a></li>
+            <li><a href="../pages/team.html">👥 Editorial Team</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <article class="full-story">
+        <h1>🤖 Living with Algorithms</h1>
+        
+        <div class="meta">
+            <span>📅 March 10, 2026</span> • 
+            <span>✍️ By David Kim</span> • 
+            <span>⏱️ 12 min read</span> • 
+            <span>🏷️ Technology</span>
+        </div>
+        
+        <img src="../images/story2.jpeg" alt="AI Technology" class="featured-image" onerror="this.src='https://via.placeholder.com/800x400?text=AI+Algorithms'">
+        
+        <p>Every day, algorithms make decisions that shape our lives. They decide what we see, what we buy, who we connect with, and increasingly, how we work and live. They are invisible architects of our digital existence—and their influence is only growing.</p>
+        
+        <h2>The Algorithmic Age</h2>
+        <p>We live in what scientists call the "algorithmic age." Code makes decisions that once required human judgment. Algorithms approve loan applications, screen job candidates, recommend medical treatments, and determine news we consume. They are everywhere, often working without our awareness.</p>
+        
+        <h2>The Hidden Influence</h2>
+        <p>Algorithms shape our reality in subtle but powerful ways. Social media algorithms determine which perspectives we see, potentially creating echo chambers that reinforce existing beliefs. Recommendation algorithms influence what we buy, watch, and read—shaping culture itself.</p>
+        
+        <blockquote>
+            <p>"We're not just using algorithms. Algorithms are using us. The question is whether we're aware of it." — Dr. Safiya Noble, Author of "Algorithms of Oppression"</p>
+        </blockquote>
+        
+        <h2>Finding Balance</h2>
+        <p>As algorithms become more powerful, learning to navigate them consciously becomes essential. This means understanding how they work, questioning their recommendations, and occasionally disconnecting to remember what we value when no algorithm is watching.</p>
+        
+        <p>The goal isn't to reject algorithms—they're too embedded in modern life for that—but to engage with them intentionally. To use them as tools rather than being used by them. To remember that behind every algorithm is a human decision about what matters.</p>
+        
+        <a href="../pages/stories.html" class="story-back-btn">← Back to Stories</a>
+    </article>
+</main>
+
+<footer>
+    <p>© 2026 VOX Magazine. All rights reserved.</p>
+    <div class="socials">
+        <a href="https://www.google.com" target="_blank">🔍</a>
+        <a href="https://www.facebook.com" target="_blank">📘</a>
+        <a href="https://www.twitter.com" target="_blank">🐦</a>
+        <a href="https://www.instagram.com" target="_blank">📸</a>
+    </div>
+</footer>
+
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navLinks.classList.toggle('show');
+        menuToggle.classList.toggle('active');
+    });
+
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('show');
+            menuToggle.classList.remove('active');
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+            navLinks.classList.remove('show');
+            menuToggle.classList.remove('active');
+        }
+    });
+</script>
+
+</body>
+</html>

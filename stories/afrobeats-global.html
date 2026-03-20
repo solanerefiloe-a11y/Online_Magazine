@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afrobeats Goes Global - VOX Magazine</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/story.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="top-row">
+            <div class="menu-button-container">
+                <button class="menu-toggle" id="menuToggle">☰</button>
+            </div>
+            <div class="logo-container">
+                <h1>🌿 VOX Magazine</h1>
+            </div>
+            <div class="since-container">
+                <span class="since-badge">Since 2026</span>
+            </div>
+        </div>
+        <div class="subtitle-row">
+            <div class="subtitle">Feature Stories • In-Depth Journalism</div>
+        </div>
+    </div>
+    <nav>
+        <ul id="navLinks">
+            <li><a href="../index.html">🏠 Home</a></li>
+            <li><a href="../pages/stories.html" class="active">📰 Feature Stories</a></li>
+            <li><a href="../pages/entertainment.html">🎬 Entertainment</a></li>
+            <li><a href="../pages/multimedia.html">🎥 Multimedia</a></li>
+            <li><a href="../pages/team.html">👥 Editorial Team</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <article class="full-story">
+        <h1>🎵 Afrobeats Goes Global</h1>
+        
+        <div class="meta">
+            <span>📅 March 12, 2026</span> • 
+            <span>✍️ By Marcus Okonkwo</span> • 
+            <span>⏱️ 8 min read</span> • 
+            <span>🏷️ Culture</span>
+        </div>
+        
+        <img src="../images/afrobeats.jpeg" alt="Afrobeats Concert" class="featured-image" onerror="this.src='https://via.placeholder.com/800x400?text=Afrobeats'">
+        
+        <p>It started in Lagos. In the streets, the clubs, the recording studios where a new sound was being born. Afrobeats—with its infectious rhythms, Pidgin English lyrics, and irrepressible energy—has grown from a local phenomenon to a global movement. Today, it's one of the fastest-growing music genres in the world.</p>
+        
+        <h2>More Than Music</h2>
+        <p>Afrobeats is a cultural force. It's the sound of a generation of Africans redefining what it means to be African in the 21st century. Confident, global, and unapologetically rooted, Afrobeats artists are claiming space on the world stage—and audiences everywhere are listening.</p>
+        
+        <blockquote>
+            <p>"Afrobeats is the sound of modern Africa. It's our story, our struggles, our celebrations—all in the music." — Burna Boy</p>
+        </blockquote>
+        
+        <h2>Chart Domination</h2>
+        <p>The numbers tell the story. Afrobeats tracks regularly top charts in the UK, US, and across Europe. Wizkid's "Essence" became a global phenomenon, spending months on the Billboard Hot 100. Rema's "Calm Down" broke records for the longest-charting Afrobeats song on US radio.</p>
+        
+        <h2>What's Next?</h2>
+        <p>For Afrobeats, the future is bright—and expansive. Artists are selling out arenas worldwide. The genre's first Grammy categories are being debated. New festivals celebrating African music are launching on every continent.</p>
+        
+        <p>Afrobeats has always been more than music. It's a declaration of identity, a celebration of resilience, and an invitation to dance. The world is finally listening—and moving to the rhythm.</p>
+        
+        <a href="../pages/stories.html" class="story-back-btn">← Back to Stories</a>
+    </article>
+</main>
+
+<footer>
+    <p>© 2026 VOX Magazine. All rights reserved.</p>
+    <div class="socials">
+        <a href="https://www.google.com" target="_blank">🔍</a>
+        <a href="https://www.facebook.com" target="_blank">📘</a>
+        <a href="https://www.twitter.com" target="_blank">🐦</a>
+        <a href="https://www.instagram.com" target="_blank">📸</a>
+    </div>
+</footer>
+
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navLinks.classList.toggle('show');
+        menuToggle.classList.toggle('active');
+    });
+
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('show');
+            menuToggle.classList.remove('active');
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+            navLinks.classList.remove('show');
+            menuToggle.classList.remove('active');
+        }
+    });
+</script>
+
+</body>
+</html>
